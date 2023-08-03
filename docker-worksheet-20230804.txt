@@ -1,0 +1,864 @@
+
+
+https://www.python.org/ftp/python/
+https://hub.docker.com/repository/docker/changyooncho/repo/general
+
+
+
+274351873145.dkr.ecr.ap-northeast-2.amazonaws.com/
+/home/oberserk/docker_build/base_ubuntu20-04_py308_cpu
+
+export ACCOUNT_ID="274351873145"
+export REGION="ap-northeast-2"
+export REGION="us-west-2"
+
+docker login -u AWS https://${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com -p $(aws ecr get-login-password --region ${REGION})
+
+export IMAGE_NAME="u2004py38cpu"
+docker build . -t ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:${IMAGE_NAME}
+
+
+docker image tag changyooncho/repo:u2004py306cpu ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py306cpu
+docker image tag changyooncho/repo:u2004py306gpu ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py306gpu
+docker image tag changyooncho/repo:u2004py307cpu ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py307cpu
+docker image tag changyooncho/repo:u2004py307gpu ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py307gpu
+docker image tag changyooncho/repo:u2004py308cpu ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py308cpu
+docker image tag changyooncho/repo:u2004py308gpu ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py308gpu
+docker image tag changyooncho/repo:u2004py309cpu ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py309cpu
+docker image tag changyooncho/repo:u2004py309gpu ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py309gpu
+docker image tag changyooncho/repo:u2004py310cpu ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py310cpu
+docker image tag changyooncho/repo:u2004py310gpu ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py310gpu
+docker image tag changyooncho/repo:u2004py311cpu ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py311cpu
+docker image tag changyooncho/repo:u2004py311gpu ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py311gpu
+
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py306cpu
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py306gpu
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py307cpu
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py307gpu
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py308cpu
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py308gpu
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py309cpu
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py309gpu
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py310cpu
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py310gpu
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py311cpu
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py311gpu
+
+# docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:u2004py39gpu
+
+docker run -it --entrypoint /bin/bash ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:${IMAGE_NAME}
+
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:${IMAGE_NAME}
+
+
+1) All
+ - adduser
+2) Master
+ - kadmin.local addprinc username : Creating Kerberos principals for client authentication
+ - hdfs dfs -mkdir /user/username
+ - hdfs dfs -chown username:username /user/username
+
+
+docker image tag changyooncho/repo:u2004py38cpu changyooncho/repo:u2004py308cpu
+docker image tag changyooncho/repo:u2004py38gpu changyooncho/repo:u2004py308gpu
+docker image tag changyooncho/repo:u2004py39cpu changyooncho/repo:u2004py309cpu
+docker image tag changyooncho/repo:u2004py39gpu changyooncho/repo:u2004py309gpu
+
+docker push changyooncho/repo:u2004py306cpu
+docker push changyooncho/repo:u2004py306gpu
+docker push changyooncho/repo:u2004py307cpu
+docker push changyooncho/repo:u2004py307gpu
+docker push changyooncho/repo:u2004py308cpu
+docker push changyooncho/repo:u2004py308gpu
+docker push changyooncho/repo:u2004py309cpu
+docker push changyooncho/repo:u2004py309gpu
+
+docker run -it --entrypoint /bin/bash changyooncho/repo:u2004py39gpu
+
+changyooncho/repo:u2004py39cpu
+
+docker build . -t changyooncho/repo:u2004py308gpu
+
+docker push changyooncho/repo:u2004py39gpu
+
+docker image tag changyooncho/repo:u2004py39gpu ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:${IMAGE_NAME}
+
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/ccy:${IMAGE_NAME}
+
+#sudo apt-get upgrade linux-libc-dev
+apt-cache show linux-libc-dev
+
+
+docker build . -t changyooncho/repo:u2004py311cpu
+docker build . -t changyooncho/repo:u2004py311gpu
+
+docker push changyooncho/repo:u2004py311cpu
+docker push changyooncho/repo:u2004py311gpu
+
+
+
+docker build . -t changyooncho/repo:u2004py307cpu
+docker image tag changyooncho/repo:u2004py307cpu  274351873145.dkr.ecr.us-west-2.amazonaws.com/ccy:u2004py307cpu
+
+#274351873145.dkr.ecr.us-west-2.amazonaws.com/ccy
+docker push 274351873145.dkr.ecr.us-west-2.amazonaws.com/ccy:u2004py308cpu
+docker run -it --entrypoint /bin/bash changyooncho/repo:u2004py308cpu
+
+
+docker build . -t changyooncho/repo:u2004py311cpu
+docker push changyooncho/repo:u2004py311cpu
+docker build . -t changyooncho/repo:u2004py311gpu
+docker push changyooncho/repo:u2004py311gpu
+
+docker build . -t changyooncho/repo:u2004py310cpu
+docker push changyooncho/repo:u2004py310cpu
+docker build . -t changyooncho/repo:u2004py310gpu
+docker push changyooncho/repo:u2004py310gpu
+
+
+docker build . -t changyooncho/u2004py309cpu
+docker push changyooncho/u2004py309cpu
+docker build . -t changyooncho/u2004py309gpu
+docker push changyooncho/u2004py309gpu
+
+docker image tag changyooncho/u2004py309cpu changyooncho/repo:u2004py309cpu
+docker image tag changyooncho/u2004py309gpu changyooncho/repo:u2004py309gpu
+docker image tag changyooncho/u2004py308cpu changyooncho/repo:u2004py308cpu
+docker image tag changyooncho/u2004py308gpu changyooncho/repo:u2004py308gpu
+docker image tag changyooncho/u2004py307cpu changyooncho/repo:u2004py307cpu
+docker image tag changyooncho/u2004py307gpu changyooncho/repo:u2004py307gpu
+docker image tag changyooncho/u2004py306cpu changyooncho/repo:u2004py306cpu
+docker image tag changyooncho/u2004py306gpu changyooncho/repo:u2004py306gpu
+
+---------------------------------------------------------------------------------------------
+
+docker build . -t changyooncho/repo:u2004py311cpu
+docker push changyooncho/repo:u2004py311cpu
+docker build . -t changyooncho/repo:u2004py311gpu
+docker push changyooncho/repo:u2004py311gpu
+
+docker build . -t changyooncho/repo:u2004py310cpu
+docker push changyooncho/repo:u2004py310cpu
+docker build . -t changyooncho/repo:u2004py310gpu
+docker push changyooncho/repo:u2004py310gpu
+
+docker build . -t changyooncho/repo:u2004py309cpu
+docker push changyooncho/repo:u2004py309cpu
+docker build . -t changyooncho/repo:u2004py309gpu
+docker push changyooncho/repo:u2004py309gpu
+
+docker build . -t changyooncho/repo:u2004py308cpu
+docker push changyooncho/repo:u2004py308cpu
+docker build . -t changyooncho/repo:u2004py308gpu
+docker push changyooncho/repo:u2004py308gpu
+
+---------------------------------------------------------------------------------------------
+
+docker build . -t changyooncho/repo:u2004py307cpu
+docker push changyooncho/repo:u2004py307cpu
+docker build . -t changyooncho/repo:u2004py307gpu
+docker push changyooncho/repo:u2004py307gpu
+
+docker build . -t changyooncho/repo:u2004py306cpu
+docker push changyooncho/repo:u2004py306cpu
+docker build . -t changyooncho/repo:u2004py306gpu
+docker push changyooncho/repo:u2004py306gpu
+
+---------------------------------------------------------------------------------------------
+
+changyooncho/u2004py311cpu
+changyooncho/u2004py311gpu
+changyooncho/u2004py310cpu
+changyooncho/u2004py310gpu
+changyooncho/u2004py309cpu
+changyooncho/u2004py309gpu
+changyooncho/u2004py308cpu
+changyooncho/u2004py308gpu
+changyooncho/u2004py307cpu
+changyooncho/u2004py307gpu
+changyooncho/u2004py306cpu
+changyooncho/u2004py306gpu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+aws s3 cp s3://changyoon.cho.oregon/samplecode/data/census-income-test_features.csv s3://changyoon.cho.oregon/samplecode/data/census-income/test_data/test_features.csv
+aws s3 cp s3://changyoon.cho.oregon/samplecode/data/census-income-test_labels.csv s3://changyoon.cho.oregon/samplecode/data/census-income/test_data/test_labels.csv
+aws s3 cp s3://changyoon.cho.oregon/samplecode/data/census-income-train_features.csv s3://changyoon.cho.oregon/samplecode/data/census-income/train_data/train_features.csv
+aws s3 cp s3://changyoon.cho.oregon/samplecode/data/census-income-train_labels.csv s3://changyoon.cho.oregon/samplecode/data/census-income/train_data/train_labels.csv
+sudo apt-get install libbz2-dev
+
+
+cd
+aws configure
+
+mkdir -p /opt/ml/input/data/train
+mkdir -p /opt/ml/model
+cd /opt/ml/input/data/train
+aws s3 sync s3://changyoon.cho.oregon/samplecode/data/census-income/train_data/ .
+
+cd ..
+aws s3 cp s3://changyoon.cho.oregon/pj00001/sampletest/20230608-224107/src/source.tar.gz .
+tar xvf source.tar.gz
+python sklearn_samplecode_training.py --batch_size 64 --epochs 20 --learning_rate 0.001
+
+
+
+    3  mkdir /opt/ml/input/data/train
+    4  mkdir -p /opt/ml/input/data/train
+    5  mkdir -p /opt/ml/model
+    6  cd /opt/ml/input/data/train
+    7  aws s3 ls
+    8  cd
+    9  aws config
+   10  aws configure
+   11  aws s3 ls
+   12  pwd
+   13  cd /opt/ml
+   14  dir
+   15  cd input/
+   16  ls -al
+   17  cd data/
+   18  dir
+   19  aws s3 ls s3://changyoon.cho.oregon/samplecode/data/census-income/train_data/
+   20  ls -al
+   21  cd train/
+   22  ls -al
+   23  aws s3 sync s3://changyoon.cho.oregon/samplecode/data/census-income/train_data/ .
+   24  dir
+   25  ls -al
+   26  cd ..
+   27  ls -al
+   28  aws s3 cp s3://changyoon.cho.oregon/pj00001/sampletest/20230608-224107/src/source.tar.gz .
+   29  ls -al
+   30  tar xvf source.tar.gz
+   31  tar dir
+   32  ls -al
+   33  rm sklearn_samplecode_processing.py
+   34  python sklearn_samplecode_training.py --batch_size 64 --epochs 20 --learning_rate 0.001
+   35  pip install _bz2
+   36  pip install '_bz2'
+
+
+
+
+cp -r base_ubuntu20-04_py308_cpu/serve/ base_ubuntu20-04_py306_cpu/serve/
+cp -r base_ubuntu20-04_py308_cpu/serve/ base_ubuntu20-04_py306_gpu/serve/
+cp -r base_ubuntu20-04_py308_cpu/serve/ base_ubuntu20-04_py307_cpu/serve/
+cp -r base_ubuntu20-04_py308_cpu/serve/ base_ubuntu20-04_py307_gpu/serve/
+#cp -r base_ubuntu20-04_py308_cpu/serve/ base_ubuntu20-04_py308_cpu/serve/
+cp -r base_ubuntu20-04_py308_cpu/serve/ base_ubuntu20-04_py308_gpu/serve/
+cp -r base_ubuntu20-04_py308_cpu/serve/ base_ubuntu20-04_py309_cpu/serve/
+cp -r base_ubuntu20-04_py308_cpu/serve/ base_ubuntu20-04_py309_gpu/serve/
+cp -r base_ubuntu20-04_py308_cpu/serve/ base_ubuntu20-04_py310_cpu/serve/
+cp -r base_ubuntu20-04_py308_cpu/serve/ base_ubuntu20-04_py310_gpu/serve/
+cp -r base_ubuntu20-04_py308_cpu/serve/ base_ubuntu20-04_py311_cpu/serve/
+cp -r base_ubuntu20-04_py308_cpu/serve/ base_ubuntu20-04_py311_gpu/serve/
+
+mkdir base_ubuntu20-04_py306_cpu/serve/
+mkdir base_ubuntu20-04_py306_gpu/serve/
+mkdir base_ubuntu20-04_py307_cpu/serve/
+mkdir base_ubuntu20-04_py307_gpu/serve/
+
+mkdir base_ubuntu20-04_py308_gpu/serve/
+mkdir base_ubuntu20-04_py309_cpu/serve/
+mkdir base_ubuntu20-04_py309_gpu/serve/
+mkdir base_ubuntu20-04_py310_cpu/serve/
+mkdir base_ubuntu20-04_py310_gpu/serve/
+mkdir base_ubuntu20-04_py311_cpu/serve/
+mkdir base_ubuntu20-04_py311_gpu/serve/
+
+    apt-get install -y make libz-dev libssl-dev libffi-dev openssl libbz2-dev && \
+
+
+base_ubuntu20-04_py307_cpu
+base_ubuntu20-04_py307_gpu
+mv base_ubuntu20-04_py308_cpu/serve/*
+mv base_ubuntu20-04_py308_gpu
+mv base_ubuntu20-04_py309_cpu
+mv base_ubuntu20-04_py309_gpu
+mv base_ubuntu20-04_py310_cpu
+mv base_ubuntu20-04_py310_gpu
+mv base_ubuntu20-04_py311_cpu
+mv base_ubuntu20-04_py311_gpu
+
+
+cp -r predictor.py base_ubuntu20-04_py306_cpu/serve/
+cp -r predictor.py base_ubuntu20-04_py306_gpu/serve/
+cp -r predictor.py base_ubuntu20-04_py307_cpu/serve/
+cp -r predictor.py base_ubuntu20-04_py307_gpu/serve/
+cp -r predictor.py base_ubuntu20-04_py308_cpu/serve/
+cp -r predictor.py base_ubuntu20-04_py308_gpu/serve/
+cp -r predictor.py base_ubuntu20-04_py309_cpu/serve/
+cp -r predictor.py base_ubuntu20-04_py309_gpu/serve/
+cp -r predictor.py base_ubuntu20-04_py310_cpu/serve/
+cp -r predictor.py base_ubuntu20-04_py310_gpu/serve/
+cp -r predictor.py base_ubuntu20-04_py311_cpu/serve/
+cp -r predictor.py base_ubuntu20-04_py311_gpu/serve/
+
+https://pypi.org/project/Werkzeug/2.1.0/
+https://pypi.org/project/joblib/1.2.0/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export ACCOUNT_ID="274351873145"
+export REGION="ap-northeast-2"
+
+docker login -u AWS https://${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com -p $(aws ecr get-login-password --region ${REGION})
+
+
+
+
+./opt/spark/jars/paranamer-2.8.jar
+./opt/spark/jars/commons-configuration2-2.8.0.jar
+curl -o ./spark-3.3.2-bin-without-hadoop.tgz https://archive.apache.org/dist/spark/spark-3.3.2/spark-3.3.2-bin-without-hadoop.tgz
+curl -o ./spark-3.4.0-bin-without-hadoop.tgz https://archive.apache.org/dist/spark/spark-3.4.0/spark-3.4.0-bin-without-hadoop.tgz
+
+
+#docker build -t glue/sparkui:latest .
+docker build -t changyooncho/repo:sparkui .
+
+docker run -it --entrypoint /bin/bash changyooncho/repo:sparkui
+
+docker image tag changyooncho/repo:sparkui  274351873145.dkr.ecr.us-west-2.amazonaws.com/ccy:sparkui
+
+docker push changyooncho/repo:sparkui
+
+LOG_DIR="s3a://xxx/spark-ui-logs/"
+AWS_ACCESS_KEY_ID="xxx"
+AWS_SECRET_ACCESS_KEY="xxx"
+
+JAVA_PATH="/opt/spark/jars/"
+
+#docker run -itd -e SPARK_HISTORY_OPTS="$SPARK_HISTORY_OPTS -Dspark.history.fs.logDirectory=$LOG_DIR -Dspark.hadoop.fs.s3a.access.key=$AWS_ACCESS_KEY_ID -Dspark.hadoop.fs.s3a.secret.key=$AWS_SECRET_ACCESS_KEY" -p 18080:18080 glue/sparkui:latest "/opt/spark/bin/spark-class org.apache.spark.deploy.history.HistoryServer"
+#docker run -it -e SPARK_HISTORY_OPTS="$SPARK_HISTORY_OPTS -Dspark.history.fs.logDirectory=$LOG_DIR -Dspark.hadoop.fs.s3a.access.key=$AWS_ACCESS_KEY_ID -Dspark.hadoop.fs.s3a.secret.key=$AWS_SECRET_ACCESS_KEY" -p 18080:18080 changyooncho/repo:sparkui "/opt/spark/bin/spark-class org.apache.spark.deploy.history.HistoryServer"
+#http://192.168.56.101:18080/
+
+docker run -it -e SPARK_HISTORY_OPTS="$SPARK_HISTORY_OPTS -Dspark.history.fs.logDirectory=$LOG_DIR -Dspark.hadoop.fs.s3a.access.key=$AWS_ACCESS_KEY_ID -Dspark.hadoop.fs.s3a.secret.key=$AWS_SECRET_ACCESS_KEY" -p 8090:8090 changyooncho/repo:sparkui "/opt/spark/bin/spark-class org.apache.spark.deploy.history.HistoryServer"
+http://192.168.56.101:8090/
+
+-Djava.library.path=$JAVA_PATH
+
+
+
+
+
+
+
+
+
+
+ /opt/spark/jars/
+
+pip install isoweek
+pip uninstall -y isoweek
+
+
+
+# image_uri = '274351873145.dkr.ecr.us-west-2.amazonaws.com/ccy:u2004py307cpu'
+Traceback (most recent call last):
+  File "/usr/local/bin/train", line 5, in <module>
+    from sagemaker_containers.cli.train import main
+  File "/usr/local/lib/python3.7/site-packages/sagemaker_containers/cli/train.py", line 14, in <module>
+    from sagemaker_containers.beta.framework import trainer
+  File "/usr/local/lib/python3.7/site-packages/sagemaker_containers/beta/framework/__init__.py", line 34, in <module>
+    from sagemaker_containers import _transformer as transformer
+  File "/usr/local/lib/python3.7/site-packages/sagemaker_containers/_transformer.py", line 22, in <module>
+    from sagemaker_containers import _content_types, _encoders, _env, _errors, _functions, _worker
+  File "/usr/local/lib/python3.7/site-packages/sagemaker_containers/_worker.py", line 18, in <module>
+    import flask
+  File "/usr/local/lib/python3.7/site-packages/flask/__init__.py", line 14, in <module>
+    from jinja2 import escape
+
+==> flask==2.2.5
+
+# image_uri = '274351873145.dkr.ecr.us-west-2.amazonaws.com/ccy:u2004py310cpu'
+# image_uri = '274351873145.dkr.ecr.us-west-2.amazonaws.com/ccy:u2004py311cpu'
+Traceback (most recent call last):
+  File "/usr/local/bin/train", line 5, in <module>
+    from sagemaker_containers.cli.train import main
+  File "/usr/local/lib/python3.11/site-packages/sagemaker_containers/cli/train.py", line 13, in <module>
+    from sagemaker_containers.beta.framework import trainer
+  File "/usr/local/lib/python3.11/site-packages/sagemaker_containers/beta/framework/__init__.py", line 21, in <module>
+    from sagemaker_containers import _env as env
+  File "/usr/local/lib/python3.11/site-packages/sagemaker_containers/_env.py", line 28, in <module>
+    from sagemaker_containers import _content_types, _logging, _mapping, _params
+  File "/usr/local/lib/python3.11/site-packages/sagemaker_containers/_mapping.py", line 143, in <module>
+    class MappingMixin(collections.Mapping):
+
+# https://github.com/aws/sagemaker-containers/blob/master/src/sagemaker_containers/_mapping.py
+==> COPY _mapping.py /usr/local/lib/python3.10/site-packages/sagemaker_containers/
+==> COPY _mapping.py /usr/local/lib/python3.11/site-packages/sagemaker_containers/
+
+
+docker build . -t 274351873145.dkr.ecr.us-west-2.amazonaws.com/ccy:u2004py311cpu
+docker push 274351873145.dkr.ecr.us-west-2.amazonaws.com/ccy:u2004py311cpu
+
+docker run -it --entrypoint /bin/bash 274351873145.dkr.ecr.us-west-2.amazonaws.com/ccy:u2004py311cpu
+
+docker build . -t 274351873145.dkr.ecr.us-west-2.amazonaws.com/ccy:u2004py307cpu
+docker push 274351873145.dkr.ecr.us-west-2.amazonaws.com/ccy:u2004py307cpu
+
+
+
+https://www.python.org/ftp/python/
+https://github.com/aws/sagemaker-containers
+https://archive.apache.org/dist/spark/
+
+
+docker run -it --entrypoint /bin/bash changyooncho/repo:u2004py309cpu
+
+
+
+
+cd base_ubuntu20-04_py311_cpu
+docker build . -t changyooncho/repo:u2004py311cpu
+docker push changyooncho/repo:u2004py311cpu
+cd ..
+
+cd base_ubuntu20-04_py311_gpu
+docker build . -t changyooncho/repo:u2004py311gpu
+docker push changyooncho/repo:u2004py311gpu
+cd ..
+
+cd base_ubuntu20-04_py310_cpu
+docker build . -t changyooncho/repo:u2004py310cpu
+docker push changyooncho/repo:u2004py310cpu
+cd ..
+
+cd base_ubuntu20-04_py310_gpu
+docker build . -t changyooncho/repo:u2004py310gpu
+docker push changyooncho/repo:u2004py310gpu
+cd ..
+
+cd base_ubuntu20-04_py309_cpu
+docker build . -t changyooncho/repo:u2004py309cpu
+docker push changyooncho/repo:u2004py309cpu
+cd ..
+
+cd base_ubuntu20-04_py309_gpu
+docker build . -t changyooncho/repo:u2004py309gpu
+docker push changyooncho/repo:u2004py309gpu
+cd ..
+
+cd base_ubuntu20-04_py308_cpu
+docker build . -t changyooncho/repo:u2004py308cpu
+docker push changyooncho/repo:u2004py308cpu
+cd ..
+
+cd base_ubuntu20-04_py308_gpu
+docker build . -t changyooncho/repo:u2004py308gpu
+docker push changyooncho/repo:u2004py308gpu
+cd ..
+
+cd base_ubuntu20-04_py307_cpu
+docker build . -t changyooncho/repo:u2004py307cpu
+docker push changyooncho/repo:u2004py307cpu
+cd ..
+
+cd base_ubuntu20-04_py307_gpu
+docker build . -t changyooncho/repo:u2004py307gpu
+docker push changyooncho/repo:u2004py307gpu
+cd ..
+
+cd base_ubuntu20-04_py306_cpu
+docker build . -t changyooncho/repo:u2004py306cpu
+docker push changyooncho/repo:u2004py306cpu
+cd ..
+
+cd base_ubuntu20-04_py306_gpu
+docker build . -t changyooncho/repo:u2004py306gpu
+docker push changyooncho/repo:u2004py306gpu
+cd ..
+
+
+ docker system prune
+
+
+
+
+
+
+oberserk@oberserk-VirtualBox:~/docker_build/spark_ui$ cat Dockerfile
+FROM amazonlinux:2
+FROM amazoncorretto:11
+FROM maven:3.9.3-amazoncorretto-11
+
+RUN yum install -y procps
+
+RUN yum upgrade -y
+RUN yum upgrade jettison
+
+WORKDIR /tmp/
+ADD pom.xml /tmp
+
+RUN curl -o ./spark-3.4.1-bin-without-hadoop.tgz https://archive.apache.org/dist/spark/spark-3.4.1/spark-3.4.1-bin-without-hadoop.tgz
+RUN tar -xzf spark-3.4.1-bin-without-hadoop.tgz && \
+    mv spark-3.4.1-bin-without-hadoop /opt/spark && \
+    rm spark-3.4.1-bin-without-hadoop.tgz
+
+RUN mvn dependency:copy-dependencies -DoutputDirectory=/opt/spark/jars/
+
+RUN rm -rf /root/.m2
+
+RUN rm /opt/spark/yarn/spark-3.4.1-yarn-shuffle.jar && \
+    rm /opt/spark/jars/jsr305-3.0.0.jar && \
+    rm /opt/spark/jars/jmespath-java-*.jar && \
+    rm /opt/spark/jars/aws-java-sdk-core-*.jar && \
+    rm /opt/spark/jars/aws-java-sdk-kms-*.jar && \
+    rm /opt/spark/jars/aws-java-sdk-s3-*.jar && \
+    rm /opt/spark/jars/ion-java-1.0.2.jar && \
+    rm /opt/spark/jars/snappy-java-1.1.8.2.jar && \
+    rm /opt/spark/jars/paranamer-2.3.jar && \
+    rm /opt/spark/jars/netty-transport-native-unix-common-4.1.63.Final.jar && \
+    rm /opt/spark/jars/netty-transport-native-epoll-4.1.63.Final.jar && \
+    rm /opt/spark/jars/netty-transport-4.1.63.Final.jar && \
+    rm /opt/spark/jars/netty-resolver-4.1.63.Final.jar && \
+    rm /opt/spark/jars/netty-handler-4.1.63.Final.jar && \
+    rm /opt/spark/jars/netty-common-4.1.63.Final.jar && \
+    rm /opt/spark/jars/netty-codec-4.1.63.Final.jar && \
+    rm /opt/spark/jars/netty-buffer-4.1.63.Final.jar && \
+    rm /opt/spark/jars/metrics-core-3.2.4.jar && \
+    rm /opt/spark/jars/jersey-server-1.19.4.jar && \
+    rm /opt/spark/jars/jersey-client-1.19.4.jar && \
+    rm /opt/spark/jars/gson-2.8.9.jar && \
+    rm /opt/spark/jars/commons-math3-3.1.1.jar && \
+    rm /opt/spark/jars/commons-io-2.8.0.jar && \
+    rm /opt/spark/jars/commons-compress-1.21.jar && \
+    rm /opt/spark/jars/avro-1.7.7.jar && \
+    rm /opt/spark/jars/mesos-1.4.3-shaded-protobuf.jar && \
+    rm /opt/spark/jars/spark-mesos_2.12-3.4.1.jar && \
+    rm /opt/spark/jars/snakeyaml-1.33.jar && \
+    rm /opt/spark/jars/jettison-1.1.jar && \
+    rm /opt/spark/jars/zjsonpatch-0.3.0.jar && \
+    rm /opt/spark/jars/parquet*.jar && \
+    rm /opt/spark/jars/nimbus-jose-jwt-9.8.1.jar && \
+    rm /opt/spark/jars/guava-27.0-jre.jar
+
+COPY jars/snakeyaml-2.0.jar /opt/spark/jars/
+COPY jars/mesos-1.11.0.jar /opt/spark/jars/
+COPY jars/mesos-1.11.0-shaded-protobuf.jar /opt/spark/jars/
+COPY jars/guava-32.1.1-jre.jar /opt/spark/jars/
+COPY jars/jettison-1.5.4.jar /opt/spark/jars/
+COPY jars/json-smart-2.4.11.jar /opt/spark/jars/
+COPY jars/nimbus-jose-jwt-9.31.jar /opt/spark/jars/
+COPY jars/spark-network-common_2.12-3.4.1.jar /opt/spark/jars/
+COPY jars/hadoop-shaded-guava-1.1.1.jar /opt/spark/jars/
+
+RUN rm -rf /usr/share/maven/lib/*
+
+RUN echo $'\n\
+spark.eventLog.enabled                      true\n\
+spark.history.ui.port                       8090\n\
+' > /opt/spark/conf/spark-defaults.conf
+
+RUN echo $'\n\
+log4j.rootLogger = info, console\n\
+log4j.appender.console=org.apache.log4j.ConsoleAppender\n\
+log4j.appender.console.target = System.out\n\
+log4j.appender.console.layout = org.apache.log4j.PatternLayout\n\
+log4j.appender.console.layout.ConversionPattern = %d{yyyy-MM-dd HH:mm:ss} %p %c{2}: %m%n\n\
+' > /opt/spark/conf/log4j.properties
+
+ENTRYPOINT ["/bin/bash", "-c"]:
+
+oberserk@oberserk-VirtualBox:~/docker_build/spark_ui$
+
+
+
+
+
+
+Exception in thread "main" java.lang.NoClassDefFoundError: org/sparkproject/guava/cache/CacheLoader
+
+Exception in thread "main" java.lang.NoClassDefFoundError: com/google/common/cache/CacheLoader (wrong name: org/sparkproject/guava/cache/CacheLoader
+
+
+
+
+rm -rf /usr/share/maven/lib/
+
+
+jersey-common-2.36.jar : 유지
+spark-network-common_2.12-3.4.1.jar : pom 만 제거
+parquet-*.jar : 다 삭제
+zjsonpatch-0.3.0.jar : 삭제
+/usr/share/maven/lib/* : 삭제
+
+
+bash-4.2# sh a.sh
+===> Found in ./META-INF/maven/net.minidev/json-smart/pom.properties
+bash-4.2#
+
+bash-4.2# sh a.sh
+===> Found in ./META-INF/maven/com.google.guava/guava/pom.properties
+bash-4.2#
+
+for x in *.jar; do echo $x; jar tvf $x | grep guava | grep maven | grep pom; done;
+
+
+json-smart-2.4.11.jar
+    57 Fri Feb 01 00:00:00 UTC 1980 META-INF/maven/net.minidev/json-smart/pom.properties
+  9181 Fri Feb 01 00:00:00 UTC 1980 META-INF/maven/net.minidev/json-smart/pom.xml
+nimbus-jose-jwt-9.8.1.jar
+   130 Sun Apr 04 17:19:46 UTC 2021 META-INF/maven/net.minidev/json-smart/pom.properties
+  2017 Sun Apr 04 16:51:14 UTC 2021 META-INF/maven/net.minidev/json-smart/pom.xml
+
+hadoop-shaded-guava-1.1.1.jar
+30.1.1-jre
+===> Found in ./META-INF/maven/com.google.guava/guava/pom.properties
+
+#!/bin/sh
+
+for x in *.jar
+do
+    rm -rf META-INF
+    jar xf $x
+
+    for i in `find . -name pom.properties`
+    do
+        KEY="2.13.2.2"  
+        cat $i | grep $KEY > /dev/null
+        if [ $? == 0 ]
+        then
+            echo $x
+            echo $KEY
+            echo "===> Found in $i"
+        fi
+
+        KEY="1.3.2"
+        cat $i | grep $KEY > /dev/null
+        if [ $? == 0 ]
+        then
+            echo $x
+            echo $KEY
+            echo "===> Found in $i"
+        fi
+
+        KEY="14.0.1"
+        cat $i | grep $KEY > /dev/null
+        if [ $? == 0 ]
+        then
+            echo $x
+            echo $KEY
+            echo "===> Found in $i"
+        fi
+
+        KEY="31.1-jre"
+        cat $i | grep $KEY > /dev/null
+        if [ $? == 0 ]
+        then
+            echo $x
+            echo $KEY
+            echo "===> Found in $i"
+        fi
+
+        KEY="30.1.1-jre"
+        cat $i | grep $KEY > /dev/null
+        if [ $? == 0 ]
+        then
+            echo $x
+            echo $KEY
+            echo "===> Found in $i"
+        fi
+    done
+
+done
+
+
+
+
+for i in `find . -name pom.properties`
+do
+  #echo $i
+  cat $i | grep $KEY > /dev/null
+  if [ $? == 0 ]
+  then
+    echo $KEY
+    echo "===> Found in $i"
+  fi
+done
+
+
+#!/bin/sh
+
+KEY="1.3.2"
+KEY="2.13.2.2"
+KEY="14.0.1"
+KEY="31.1-jre"
+KEY="30.1.1-jre"
+
+for x in *.jar
+do
+    rm -rf META-INF
+    jar xf $x
+
+    for i in `find . -name pom.properties`
+    do
+        KEY="1.3.2"
+        KEY="2.13.2.2"
+        KEY="14.0.1"
+        KEY="31.1-jre"
+        KEY="30.1.1-jre"
+
+        echo $x
+        cat $i | grep $KEY > /dev/null
+
+        if [ $? == 0 ]
+        then
+            echo $KEY
+            echo "===> Found in $i"
+        fi
+
+    done
+
+done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#!/bin/sh
+
+# KEY="1.3.2"
+# KEY="2.13.2.2"
+# KEY="14.0.1"
+# KEY="31.1-jre"
+# KEY="30.1.1-jre"
+
+for x in *.jar
+do
+    echo $x
+    rm -rf META-INF
+    jar xf $x
+
+    for i in `find . -name pom.properties`
+    do
+        KEY="1.3.2"
+
+        cat $i | grep $KEY > /dev/null
+
+        if [ $? == 0 ]
+        then
+            echo $KEY
+            echo "===> Found in $i"
+        fi
+
+        KEY="2.13.2.2"
+
+        cat $i | grep $KEY > /dev/null
+
+        if [ $? == 0 ]
+        then
+            echo $KEY
+            echo "===> Found in $i"
+        fi
+
+        KEY="14.0.1"
+
+        cat $i | grep $KEY > /dev/null
+
+        if [ $? == 0 ]
+        then
+            echo $KEY
+            echo "===> Found in $i"
+        fi
+
+        KEY="31.1-jre"
+
+        cat $i | grep $KEY > /dev/null
+
+        if [ $? == 0 ]
+        then
+            echo $KEY
+            echo "===> Found in $i"
+        fi
+
+        KEY="30.1.1-jre"
+
+        cat $i | grep $KEY > /dev/null
+
+        if [ $? == 0 ]
+        then
+            echo $KEY
+            echo "===> Found in $i"
+        fi
+
+    done
+
+done
+
+
+
+
+
+
+
+RUN pip install cryptography -U
+
