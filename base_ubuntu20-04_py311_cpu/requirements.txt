@@ -1,0 +1,63 @@
+##### Core scientific packages 
+#jupyter
+#matplotlib
+numpy
+pandas
+scipy
+
+##### Machine Learning packages
+scikit-learn
+#xgboost
+#lightgbm
+#catboost
+
+##### Additional utilities 
+# Efficient jobs (caching, parallelism, persistence)
+joblib
+
+# http requests
+requests
+
+# Optional: 
+numexpr
+nltk
+urlextract
+ftfy
+psutil
+python-dateutil
+isoweek
+six
+retrying
+
+# Specific lib versions to avoid conflicts
+attrs
+cloudpickle
+dill
+gast
+httplib2
+
+# Additional Data Handling library
+mlxtend
+statsmodels
+seaborn
+
+# AWS
+awscli
+boto3
+botocore
+#pyathena
+#pyspark
+sagemaker
+sagemaker-training
+sagemaker-inference
+sagemaker-containers
+multi-model-server
+model-archiver
+s3fs
+#awswrangler
+
+##### Transfrom with Custom Docker
+#flask
+flask==2.3.2
+gunicorn
+

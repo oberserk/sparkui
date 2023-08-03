@@ -1,0 +1,54 @@
+# Core scientific packages  
+numpy
+pandas
+scipy
+scikit-learn
+
+matplotlib
+mlxtend
+statsmodels
+seaborn
+
+# ML
+#xgboost
+#catboost
+#lightgbm
+#tensorflow 
+
+# Optional: 
+numexpr
+nltk
+urlextract
+ftfy
+psutil
+python-dateutil
+isoweek
+six
+retrying
+
+# Addtional PKG
+jupyter
+joblib
+
+##############################
+
+# AWS
+awscli
+boto3
+botocore
+pyathena
+#pyspark
+#awswrangler
+sagemaker
+sagemaker-training
+sagemaker-inference
+sagemaker-containers
+multi-model-server
+model-archiver
+s3fs
+
+# Transfrom with Custom Docker
+flask==2.1.0
+gunicorn
+
+
