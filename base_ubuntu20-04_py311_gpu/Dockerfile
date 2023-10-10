@@ -1,6 +1,8 @@
 FROM nvidia/cuda:11.4.3-cudnn8-devel-ubuntu20.04
 #FROM ubuntu:20.04
 
+ENV PY_VERSION 3.11.6
+
 ###
 # Set Python
 ENV DEBIAN_FRONTEND=noninteractive
@@ -22,14 +24,14 @@ RUN apt-get update && \
 RUN mkdir -p /tmp
 WORKDIR /tmp
 
-RUN wget https://www.python.org/ftp/python/3.11.6/Python-3.11.6.tgz && \
-    tar xzvf Python-3.11.6.tgz  && \
-    cd Python-3.11.6 && \
+RUN wget https://www.python.org/ftp/python/${PY_VERSION}/Python-${PY_VERSION}.tgz && \
+    tar xzvf Python-${PY_VERSION}.tgz  && \
+    cd Python-${PY_VERSION} && \
     ./configure --with-ssl && \
     #make && \
     #make install && \
     make altinstall && \
-    cd .. && rm -rf Python-3.11.6
+    cd .. && rm -rf Python-${PY_VERSION}
 
 RUN rm -rf /usr/bin/python && \
     rm -rf /usr/bin/python3 && \
