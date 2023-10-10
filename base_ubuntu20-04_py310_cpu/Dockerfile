@@ -21,14 +21,14 @@ RUN apt-get update && \
 RUN mkdir -p /tmp
 WORKDIR /tmp
 
-RUN wget https://www.python.org/ftp/python/3.10.11/Python-3.10.11.tgz && \
-    tar xzvf Python-3.10.11.tgz  && \
-    cd Python-3.10.11 && \
+RUN wget https://www.python.org/ftp/python/3.10.13/Python-3.10.13.tgz && \
+    tar xzvf Python-3.10.13.tgz  && \
+    cd Python-3.10.13 && \
     ./configure --with-ssl && \
     #make && \
     #make install && \
     make altinstall && \
-    cd .. && rm -rf Python-3.10.11
+    cd .. && rm -rf Python-3.10.13
 
 RUN rm -rf /usr/bin/python && \
     rm -rf /usr/bin/python3 && \
