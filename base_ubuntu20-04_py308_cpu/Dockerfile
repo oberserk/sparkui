@@ -21,14 +21,14 @@ RUN apt-get update && \
 RUN mkdir -p /tmp
 WORKDIR /tmp
 
-RUN wget https://www.python.org/ftp/python/3.8.16/Python-3.8.16.tgz && \
-    tar xzvf Python-3.8.16.tgz  && \
-    cd Python-3.8.16 && \
+RUN wget https://www.python.org/ftp/python/3.8.18/Python-3.8.18.tgz && \
+    tar xzvf Python-3.8.18.tgz  && \
+    cd Python-3.8.18 && \
     ./configure --with-ssl && \
     #make && \
     #make install && \
     make altinstall && \
-    cd .. && rm -rf Python-3.8.16
+    cd .. && rm -rf Python-3.8.18
 
 RUN rm -rf /usr/bin/python && \
     rm -rf /usr/bin/python3 && \
