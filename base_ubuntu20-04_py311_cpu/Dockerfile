@@ -1,5 +1,4 @@
 FROM ubuntu:20.04
-#FROM nvidia/cuda:11.4.3-cudnn8-devel-ubuntu20.04
 
 ENV PY_VERSION 3.11.6
 
@@ -15,10 +14,11 @@ RUN apt-get update && \
     apt-get -y autoremove && \
     apt-get install -y libaio1 unixodbc unixodbc-dev vim gcc wget unzip wget nginx ca-certificates && \
     apt-get install -y make libz-dev libssl-dev libffi-dev openssl libbz2-dev && \
+    apt-get upgrade -y linux-libc-dev && \
     rm -rf /var/lib/apt/lists/*
 
 ###
-# Install Python 3.11
+# Install Python
 
 RUN mkdir -p /tmp
 WORKDIR /tmp
@@ -27,8 +27,6 @@ RUN wget https://www.python.org/ftp/python/${PY_VERSION}/Python-${PY_VERSION}.tg
     tar xzvf Python-${PY_VERSION}.tgz  && \
     cd Python-${PY_VERSION} && \
     ./configure --with-ssl && \
-    #make && \
-    #make install && \
     make altinstall && \
     cd .. && rm -rf Python-${PY_VERSION}
 
@@ -61,8 +59,8 @@ WORKDIR /
 
 ###
 # Install Python Package
-#RUN pip install --index-url=http://10.81.121.104:13086/simple/ --trusted-host 10.81.121.104 -r /requirements.txt && \
 RUN pip install cryptography -U
+RUN pip install setuptools -U
 
 COPY requirements.txt /
 RUN pip install -r /requirements.txt && \
@@ -76,16 +74,7 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 
 
 ###
-# PIP
-#RUN mkdir -p /root/.pip
-#COPY pip.conf /root/.pip/
-
-
-###
-# EntryPoint
-#ENTRYPOINT ["python3", "/app/python_version.py"]
-
-# Set up the program in the image to transfrom
+# Hosting Inference
 COPY serve/nginx.conf /etc/nginx/
 COPY serve/wsgi.py /usr/local/bin/
 COPY serve/predictor.py /usr/local/bin/
