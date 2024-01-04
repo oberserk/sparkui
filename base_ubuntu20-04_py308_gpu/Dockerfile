@@ -13,7 +13,7 @@ RUN apt-get update && \
     apt-get -y purge python3.8 && \
     apt-get -y autoremove && \
     apt-get install -y libaio1 unixodbc unixodbc-dev vim gcc wget unzip wget nginx ca-certificates && \
-    apt-get install -y make libz-dev libssl-dev libffi-dev openssl libbz2-dev && \
+    apt-get install -y make libz-dev libssl-dev libffi-dev openssl libbz2-dev libsqlite3-dev && \
     apt-get upgrade -y linux-libc-dev && \
     rm -rf /var/lib/apt/lists/*
 
